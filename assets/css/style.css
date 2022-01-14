@@ -199,6 +199,25 @@ header .navbar .nav-link {
                         clients Css
 
 */
+#clients__area {
+  margin: 70px 0;
+  min-height: 140px;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  overflow-x: hidden;
+}
+
+#clients__area .clients__image {
+  width: 110px;
+  -o-object-fit: contain;
+  object-fit: contain;
+  margin-left: 70px;
+}
+
 /* 
 
                         about Css

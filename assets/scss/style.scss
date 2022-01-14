@@ -194,6 +194,19 @@ header {
 
 */
 
+#clients__area {
+  margin: 70px 0;
+  min-height: 140px;
+  align-items: center;
+  justify-content: center;
+  overflow-x: hidden;
+  .clients__image {
+    width: 110px;
+    object-fit: contain;
+    margin-left: 70px;
+  }
+}
+
 /* 
 
                         about Css
