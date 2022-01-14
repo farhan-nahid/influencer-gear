@@ -17,9 +17,10 @@
 $hc: #3a3a3a;
 $pc: #787885;
 $btn: #e02c6d;
-$bc: #aaaaaa;
+$bc: #7878852e;
 $fbc: #0a0826;
 $wc: #ffffff;
+$sc: #fb8200;
 
 /* 
 
@@ -95,6 +96,7 @@ h1 {
   display: flex;
   align-items: center;
   flex-wrap: wrap;
+  justify-content: center;
 }
 
 .half__width {
@@ -148,42 +150,48 @@ header {
   margin: 70px auto;
   padding: 100px 0;
   background: url('../images/banner-bg.png') no-repeat right / contain;
-  .banner__content {
-    p {
-      margin: 20px 0;
-      font-family: Poppins;
-      font-size: 16px;
-      font-style: normal;
-      font-weight: 400;
-      line-height: 24px;
-      letter-spacing: 0px;
-      text-align: left;
-      color: $pc;
+  .flex__area {
+    .banner__content {
+      p {
+        margin: 20px 0;
+        font-family: Poppins;
+        font-size: 16px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 24px;
+        letter-spacing: 0px;
+        text-align: left;
+        color: $pc;
+      }
+      button {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: 10px 24px;
+        width: 196px;
+        height: 44px;
+        left: 120px;
+        top: 511px;
+        background: #e02c6d;
+        border-radius: 41px;
+        color: #fff;
+        border: 0;
+        outline: 0;
+        i {
+          margin-left: 10px;
+        }
+      }
     }
-    button {
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      padding: 10px 24px;
-      width: 196px;
-      height: 44px;
-      left: 120px;
-      top: 511px;
-      background: #e02c6d;
-      border-radius: 41px;
-      color: #fff;
-      border: 0;
-      outline: 0;
-    }
-  }
-  .banner__image {
-    display: flex;
-    justify-content: center;
 
-    img {
-      width: 440px;
-      height: 414px;
-      object-fit: cover;
+    .banner__image {
+      display: flex;
+      justify-content: center;
+
+      img {
+        width: 440px;
+        height: 414px;
+        object-fit: cover;
+      }
     }
   }
 }
@@ -195,15 +203,112 @@ header {
 */
 
 #clients__area {
-  margin: 70px 0;
+  margin: 70px auto;
   min-height: 140px;
   align-items: center;
   justify-content: center;
   overflow-x: hidden;
+  border: 1px solid $bc;
   .clients__image {
     width: 110px;
+    margin: 0 auto;
     object-fit: contain;
-    margin-left: 70px;
+    margin: 0 35px;
+  }
+}
+
+/* 
+
+                        collections Css
+
+*/
+
+#popular__collection {
+  margin: 70px auto;
+  h2 {
+    font-family: Poppins;
+    font-size: 28px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 70px;
+    letter-spacing: 0px;
+    text-align: center;
+    color: $hc;
+  }
+  .flex__area {
+    margin-top: 50px;
+    .collection__card {
+      margin: 15px;
+      padding: 20px;
+      width: 350px;
+      border-radius: 5px;
+      box-shadow: 1px 2px 19px $pc;
+
+      img {
+        width: 100%;
+        height: 100%;
+        object-fit: contain;
+      }
+      h3 {
+        margin-top: 15px;
+        font-family: Poppins;
+        font-size: 28px;
+        font-style: normal;
+        font-weight: 500;
+        line-height: 40px;
+        letter-spacing: 0em;
+        text-align: left;
+        color: $hc;
+      }
+
+      h4 {
+        margin: 6px 0;
+        font-family: Poppins;
+        font-size: 24px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 36px;
+        letter-spacing: 0em;
+        text-align: left;
+        color: $fbc;
+      }
+      .ratting {
+        margin-bottom: 8px;
+        i {
+          font-size: 14px;
+          color: $sc;
+        }
+        span {
+          font-size: 14px;
+          margin-left: 15px;
+          font-weight: 600;
+        }
+      }
+      p {
+        width: 80%;
+        font-size: 14px;
+        font-style: normal;
+        line-height: 28px;
+        letter-spacing: 0.018em;
+        text-align: left;
+        color: $pc;
+      }
+    }
+  }
+  a {
+    display: block;
+    margin-top: 30px;
+    font-family: Poppins;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 24px;
+    letter-spacing: 0px;
+    text-align: right;
+    color: $btn;
+    i {
+      margin-left: 10px;
+    }
   }
 }
 
@@ -232,10 +337,11 @@ header {
 }
 
 @media only screen and (max-width: 800px) {
-  .flex__area {
-    flex-direction: column-reverse;
+  #hero__area {
+    .flex__area {
+      flex-direction: column-reverse;
+    }
   }
-
   .half__width {
     width: 100%;
   }
@@ -252,23 +358,35 @@ header {
     margin: 50px auto;
     padding: 50px 0;
     background: url('../images/banner-bg.png') no-repeat top / contain;
-    .banner__content {
-      margin-top: 50px;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      p {
-        font-size: 14px;
-        font-weight: 500;
-        line-height: 21px;
-        text-align: center;
+    .flex__area {
+      .banner__content {
+        margin-top: 50px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        p {
+          font-size: 14px;
+          font-weight: 500;
+          line-height: 21px;
+          text-align: center;
+        }
+      }
+      .banner__image {
+        img {
+          width: 250px;
+          height: 250px;
+          object-fit: cover;
+        }
       }
     }
-    .banner__image {
-      img {
-        width: 250px;
-        height: 250px;
-        object-fit: cover;
+  }
+  #popular__collection {
+    .flex__area {
+      .collection__card {
+        width: 90%;
+        margin: 0 auto;
+        margin: 0;
+        margin-bottom: 50px;
       }
     }
   }

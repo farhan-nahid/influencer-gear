@@ -7,5 +7,6 @@ $(document).ready(() => {
     centerMode: true,
     centerPadding: '0',
     autoplay: true,
+    pauseOnHover: false,
   });
 });
