@@ -1,1 +1,141 @@
-/* No CSS *//*# sourceMappingURL=style.css.map */
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap");
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+/* 
+
+                        Color Variables
+
+*/
+/* 
+
+                        utilities
+
+*/
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: #ffffff;
+  font-family: 'Poppins', sans-serif;
+}
+
+a,
+span,
+input,
+textarea,
+button {
+  display: inline-block;
+}
+
+a {
+  text-decoration: none;
+}
+
+ul,
+ol {
+  list-style-type: none;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+ul,
+ol,
+li,
+section,
+div {
+  margin: 0;
+  padding: 0;
+}
+
+h1 {
+  color: #3a3a3a;
+  font-family: Poppins;
+  font-size: 52px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 70px;
+  letter-spacing: 0px;
+  text-align: left;
+}
+
+/* 
+
+                        common classes
+
+*/
+.wrapper {
+  width: 1600px;
+  margin: 0 auto;
+}
+
+/* 
+
+                        Navbar Css
+
+*/
+header .navbar {
+  padding: 20px 0;
+}
+
+header .navbar .navbar-brand {
+  color: #3a3a3a;
+  font-family: Poppins;
+  font-size: 24px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 36px;
+  letter-spacing: 0px;
+  text-align: left;
+}
+
+header .navbar .nav-item {
+  color: #3a3a3a;
+  font-family: Poppins;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 24px;
+  letter-spacing: 0px;
+  text-align: left;
+  padding: 0 !important;
+  margin-left: 34px;
+}
+
+header .navbar .nav-link {
+  padding: 0 !important;
+}
+
+/* 
+
+                        hero area Css
+
+*/
+/* 
+
+                        clients Css
+
+*/
+/* 
+
+                        about Css
+
+*/
+/* 
+
+                        footer Css
+
+*/
+/*# sourceMappingURL=style.css.map */
