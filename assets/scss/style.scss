@@ -91,6 +91,16 @@ h1 {
   margin: 0 auto;
 }
 
+.flex__area {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.half__width {
+  width: 50%;
+}
+
 /* 
 
                         Navbar Css
@@ -134,6 +144,50 @@ header {
 
 */
 
+#hero__area {
+  margin: 70px auto;
+  padding: 100px 0;
+  background: url('../images/banner-bg.png') no-repeat right / contain;
+  .banner__content {
+    p {
+      margin: 20px 0;
+      font-family: Poppins;
+      font-size: 16px;
+      font-style: normal;
+      font-weight: 400;
+      line-height: 24px;
+      letter-spacing: 0px;
+      text-align: left;
+      color: $pc;
+    }
+    button {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 10px 24px;
+      width: 196px;
+      height: 44px;
+      left: 120px;
+      top: 511px;
+      background: #e02c6d;
+      border-radius: 41px;
+      color: #fff;
+      border: 0;
+      outline: 0;
+    }
+  }
+  .banner__image {
+    display: flex;
+    justify-content: center;
+
+    img {
+      width: 440px;
+      height: 414px;
+      object-fit: cover;
+    }
+  }
+}
+
 /* 
 
                         clients Css
@@ -151,3 +205,58 @@ header {
                         footer Css
 
 */
+
+/* 
+
+    media query
+
+*/
+
+@media only screen and (max-width: 1650px) {
+  .wrapper {
+    width: 92%;
+  }
+}
+
+@media only screen and (max-width: 800px) {
+  .flex__area {
+    flex-direction: column-reverse;
+  }
+
+  .half__width {
+    width: 100%;
+  }
+}
+
+@media only screen and (max-width: 500px) {
+  h1 {
+    font-size: 28px;
+    font-weight: 700;
+    line-height: 42px;
+    text-align: center;
+  }
+  #hero__area {
+    margin: 50px auto;
+    padding: 50px 0;
+    background: url('../images/banner-bg.png') no-repeat top / contain;
+    .banner__content {
+      margin-top: 50px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      p {
+        font-size: 14px;
+        font-weight: 500;
+        line-height: 21px;
+        text-align: center;
+      }
+    }
+    .banner__image {
+      img {
+        width: 250px;
+        height: 250px;
+        object-fit: cover;
+      }
+    }
+  }
+}
