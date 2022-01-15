@@ -122,7 +122,7 @@ button i {
 }
 
 .half__width {
-  width: 50%;
+  width: 49%;
 }
 
 /* 
@@ -191,6 +191,7 @@ header .navbar .nav-link {
 }
 
 #hero__area .flex__area .banner__image {
+  margin-left: 2%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -236,11 +237,21 @@ header .navbar .nav-link {
 }
 
 #clients__area .clients__image {
-  width: 110px;
-  margin: 0 auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin: 0 35px;
+}
+
+#clients__area .clients__image img {
   -o-object-fit: contain;
      object-fit: contain;
-  margin: 0 35px;
 }
 
 /* 
@@ -355,7 +366,7 @@ header .navbar .nav-link {
 
 */
 #about__area {
-  margin: 70px 0;
+  margin: 70px auto;
 }
 
 #about__area .flex__area .about__image {
@@ -369,7 +380,7 @@ header .navbar .nav-link {
 }
 
 #about__area .flex__area .about__content {
-  width: 48%;
+  width: 52%;
   margin-left: 2%;
 }
 
