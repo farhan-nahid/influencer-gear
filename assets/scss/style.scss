@@ -362,6 +362,36 @@ header {
 
 */
 
+footer {
+  margin-top: 70px;
+  padding: 70px 0;
+  background: $fbc;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  .wrapper {
+    h5 {
+      font-family: Poppins;
+      font-size: 24px;
+      font-style: normal;
+      font-weight: 700;
+      line-height: 36px;
+      letter-spacing: 0px;
+      color: $wc;
+    }
+    h6 {
+      font-size: 14px;
+      font-style: normal;
+      font-weight: 700;
+      line-height: 24px;
+      letter-spacing: 0em;
+      color: $wc;
+      margin-top: 20px;
+    }
+  }
+}
+
 /* 
 
     media query
