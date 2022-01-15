@@ -129,8 +129,15 @@ button {
 */
 
 header {
+  .navbar-light .navbar-toggler {
+    width: 75px;
+    color: $btn !important;
+    border-color: transparent !important;
+  }
+
   .navbar {
     padding: 20px 0;
+
     .navbar-brand {
       color: $hc;
       font-family: Poppins;
@@ -168,7 +175,6 @@ header {
 #hero__area {
   margin: 70px auto;
   padding: 100px 0;
-  background: url('../images/banner-bg.png') no-repeat right / contain;
   .flex__area {
     .banner__content {
       p {
@@ -187,11 +193,19 @@ header {
     .banner__image {
       display: flex;
       justify-content: center;
-
-      img {
+      position: relative;
+      .image__bg {
+        width: 580px;
+        height: 528px;
+        z-index: -1;
+        object-fit: contain;
+      }
+      .banner__img {
+        position: absolute;
         width: 440px;
         height: 414px;
-        object-fit: cover;
+        object-fit: contain;
+        top: 40px;
       }
     }
   }
@@ -404,27 +418,78 @@ footer {
   }
 }
 
-@media only screen and (max-width: 800px) {
+@media only screen and (max-width: 992px) {
+  header {
+    .navbar {
+      padding: 20px 0;
+      text-align: center;
+      .nav-item {
+        text-align: center;
+        margin-left: 0;
+        margin-top: 25px;
+      }
+    }
+  }
+
   #hero__area,
   #about__area {
+    margin: 50px auto;
+    padding: 50px 0;
     .flex__area {
       flex-direction: column-reverse;
+    }
+  }
+  #hero__area {
+    .flex__area {
+      .banner__content {
+        margin-top: 50px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        p {
+          font-size: 14px;
+          font-weight: 500;
+          line-height: 21px;
+          text-align: center;
+        }
+      }
     }
   }
   .half__width {
     width: 100%;
   }
+
   #about__area {
+    margin: 50px auto;
     .flex__area {
+      .about__content {
+        width: 70%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        h2 {
+          font-size: 24px;
+          font-weight: 700;
+          line-height: 36px;
+          text-align: center;
+        }
+        p {
+          font-size: 14px;
+          font-weight: 500;
+          line-height: 21px;
+          text-align: center;
+        }
+      }
       .about__image {
-        width: 100%;
+        margin-top: 50px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
         img {
           width: 250px;
           height: 250px;
+          object-fit: cover;
         }
-      }
-      .about__content {
-        width: 100%;
       }
     }
   }
@@ -440,7 +505,6 @@ footer {
   #hero__area {
     margin: 50px auto;
     padding: 50px 0;
-    background: url('../images/banner-bg.png') no-repeat top / contain;
     .flex__area {
       .banner__content {
         margin-top: 50px;
@@ -452,6 +516,16 @@ footer {
           font-weight: 500;
           line-height: 21px;
           text-align: center;
+        }
+      }
+      .banner__image {
+        .image__bg {
+          width: 350px;
+          height: 350px;
+        }
+        .banner__img {
+          width: 250px;
+          height: 250px;
         }
       }
     }
@@ -490,6 +564,7 @@ footer {
       }
     }
   }
+
   #popular__collection {
     .flex__area {
       .collection__card {

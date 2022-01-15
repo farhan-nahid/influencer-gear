@@ -130,6 +130,12 @@ button i {
                         Navbar Css
 
 */
+header .navbar-light .navbar-toggler {
+  width: 75px;
+  color: #e02c6d !important;
+  border-color: transparent !important;
+}
+
 header .navbar {
   padding: 20px 0;
 }
@@ -170,7 +176,6 @@ header .navbar .nav-link {
 #hero__area {
   margin: 70px auto;
   padding: 100px 0;
-  background: url("../images/banner-bg.png") no-repeat right/contain;
 }
 
 #hero__area .flex__area .banner__content p {
@@ -192,13 +197,24 @@ header .navbar .nav-link {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
+  position: relative;
 }
 
-#hero__area .flex__area .banner__image img {
+#hero__area .flex__area .banner__image .image__bg {
+  width: 580px;
+  height: 528px;
+  z-index: -1;
+  -o-object-fit: contain;
+     object-fit: contain;
+}
+
+#hero__area .flex__area .banner__image .banner__img {
+  position: absolute;
   width: 440px;
   height: 414px;
-  -o-object-fit: cover;
-     object-fit: cover;
+  -o-object-fit: contain;
+     object-fit: contain;
+  top: 40px;
 }
 
 /* 
@@ -431,40 +447,27 @@ footer .wrapper h6 {
   }
 }
 
-@media only screen and (max-width: 800px) {
+@media only screen and (max-width: 992px) {
+  header .navbar {
+    padding: 20px 0;
+    text-align: center;
+  }
+  header .navbar .nav-item {
+    text-align: center;
+    margin-left: 0;
+    margin-top: 25px;
+  }
+  #hero__area,
+  #about__area {
+    margin: 50px auto;
+    padding: 50px 0;
+  }
   #hero__area .flex__area,
   #about__area .flex__area {
     -webkit-box-orient: vertical;
     -webkit-box-direction: reverse;
         -ms-flex-direction: column-reverse;
             flex-direction: column-reverse;
-  }
-  .half__width {
-    width: 100%;
-  }
-  #about__area .flex__area .about__image {
-    width: 100%;
-  }
-  #about__area .flex__area .about__image img {
-    width: 250px;
-    height: 250px;
-  }
-  #about__area .flex__area .about__content {
-    width: 100%;
-  }
-}
-
-@media only screen and (max-width: 500px) {
-  h1 {
-    font-size: 28px;
-    font-weight: 700;
-    line-height: 42px;
-    text-align: center;
-  }
-  #hero__area {
-    margin: 50px auto;
-    padding: 50px 0;
-    background: url("../images/banner-bg.png") no-repeat top/contain;
   }
   #hero__area .flex__area .banner__content {
     margin-top: 50px;
@@ -484,6 +487,95 @@ footer .wrapper h6 {
     font-weight: 500;
     line-height: 21px;
     text-align: center;
+  }
+  .half__width {
+    width: 100%;
+  }
+  #about__area {
+    margin: 50px auto;
+  }
+  #about__area .flex__area .about__content {
+    width: 70%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  #about__area .flex__area .about__content h2 {
+    font-size: 24px;
+    font-weight: 700;
+    line-height: 36px;
+    text-align: center;
+  }
+  #about__area .flex__area .about__content p {
+    font-size: 14px;
+    font-weight: 500;
+    line-height: 21px;
+    text-align: center;
+  }
+  #about__area .flex__area .about__image {
+    margin-top: 50px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  #about__area .flex__area .about__image img {
+    width: 250px;
+    height: 250px;
+    -o-object-fit: cover;
+       object-fit: cover;
+  }
+}
+
+@media only screen and (max-width: 500px) {
+  h1 {
+    font-size: 28px;
+    font-weight: 700;
+    line-height: 42px;
+    text-align: center;
+  }
+  #hero__area {
+    margin: 50px auto;
+    padding: 50px 0;
+  }
+  #hero__area .flex__area .banner__content {
+    margin-top: 50px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  #hero__area .flex__area .banner__content p {
+    font-size: 14px;
+    font-weight: 500;
+    line-height: 21px;
+    text-align: center;
+  }
+  #hero__area .flex__area .banner__image .image__bg {
+    width: 350px;
+    height: 350px;
+  }
+  #hero__area .flex__area .banner__image .banner__img {
+    width: 250px;
+    height: 250px;
   }
   #about__area {
     margin: 50px auto;
